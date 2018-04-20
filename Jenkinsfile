@@ -57,7 +57,7 @@ pipeline {
             }
             dir ('/home/jenkins/go/src/github.com/jstrachan/mymicro3') {
               container('go') {
-                input "READY??"
+                // input "READY??"
                 sh "make build"
                 sh 'export VERSION=`cat VERSION` && skaffold run -f skaffold.yaml'
               }
